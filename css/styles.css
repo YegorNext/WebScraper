@@ -1,0 +1,56 @@
+.bold{
+    font-weight: 600;
+}
+
+.light-bold{
+    font-weight: 500;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    border-bottom: 1px solid #A0A0A0;
+}
+
+thead th{
+    width: 15%;
+    font-weight: 600;
+}
+
+thead th:first-child{
+    width: 5%;
+}
+
+tbody tr th{
+    font-weight: 500;
+}
+
+
+.overflow-container{
+    min-width: 1270px;
+}
+
+.container-xxl:last-child{
+    overflow: scroll;
+}
+
+
+tr:nth-child(even) {
+    background-color: #FAFAFA; /* Серый цвет для четных строк */
+  }
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Белый цвет для нечетных строк */
+}
+
+tbody tr:hover{
+    background-color: #FFFEE4;
+    
+}
+
+.display-flex{
+    display: flex;
+}
