@@ -1,35 +1,57 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+.bold{
+  font-weight: 600;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.light-bold{
+  font-weight: 500;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+table{
+  width: 100%;
+  border-collapse: collapse;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+thead{
+  border-bottom: 1px solid #A0A0A0;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+thead th{
+  width: 15%;
+  font-weight: 600;
+}
+
+thead th:first-child{
+  width: 5%;
+}
+
+tbody tr th{
+  font-weight: 500;
+}
+
+
+.overflow-container{
+  min-width: 1270px;
+}
+
+.container-xxl:last-child{
+  overflow: scroll;
+}
+
+
+tr:nth-child(even) {
+  background-color: #FAFAFA; 
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff; 
+}
+
+tbody tr:hover{
+  background-color: #FFFEE4;
+  
+}
+
+.control-btns div,
+.control-btns button{
+  margin-right: 5px;
 }
