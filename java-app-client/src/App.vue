@@ -8,9 +8,10 @@
         data(){
             return{
                 userData: [
-                    { id: "1", Username: "Ngetst", Name: "Yehrs", Phone: "998", Email: "yegor.d02152gmail.com", Date: "23.05.2024", Action: "strst" },
-                    { id: "2", Username: "Uniqeut", Name: "John", Phone: "123", Email: "john@example.com", Date: "24.05.2024", Action: "delete" },
-                    { id: "3", Username: "Taketsy", Name: "Jane", Phone: "456", Email: "jane@example.com", Date: "25.05.2024", Action: "edit" }
+                    { id: "1", Username: "Ngetst", Name: "Yehrs", Phone: "998", Email: "yegor.d02152gmail.com", Date: "23.05.2024", checked: false},
+                    { id: "2", Username: "Uniqeut", Name: "John", Phone: "123", Email: "john@example.com", Date: "24.05.2024", checked: false},
+                    { id: "3", Username: "Taketsy", Name: "Jane", Phone: "456", Email: "jane@example.com", Date: "25.05.2024", checked: false},
+                    { id: "4", Username: "Test", Name: "Jane", Phone: "3465235235", Email: "jane@example.com", Date: "25.05.2024", checked: false}
                 ]
             }
         },
@@ -20,6 +21,9 @@
             },
             dataAscSort(){
                 this.userData.sort((a, b) => a.id - b.id);
+            },
+            deleteData(){
+                this.userData = this.userData.filter(item => !item.checked);
             }
         }
     }
@@ -33,7 +37,7 @@
                         <div class = "dropdown">
                             <button class = "btn btn-secondary dropdown-toggle" type = "button" id = "actionDropdown" data-bs-toggle="dropdown" aria-expanded="false">Actions</button>
                             <ul class = "dropdown-menu" aria-labelledby="actionDropdown">
-                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                <li><a class="dropdown-item" href="#" @click = "deleteData()">Delete</a></li>
                                 <li><a class="dropdown-item" href="#">Import Excel</a></li>
                                 <li><a class="dropdown-item" href="#">Export Excel</a></li>
                             </ul>
