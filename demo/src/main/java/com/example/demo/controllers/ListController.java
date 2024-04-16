@@ -18,14 +18,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 
 @RestController
-@RequestMapping("/products")
-public class ProductController {
+@RequestMapping("/list")
+public class ListController {
 
     @Autowired
     private IProductRepository pRepository;
 
-    @GetMapping(path = "/", produces = "application/json")
-    @CrossOrigin(origins = "http://localhost:5173")
+    @GetMapping("/")
     @ResponseBody
     public Iterable<Product> getProducts() {
         return pRepository.findAll();
@@ -35,17 +34,5 @@ public class ProductController {
     public ResponseEntity<String> createProductsList(@RequestBody String url) {
 
         return ResponseEntity.ok("List successfully added");
-    }
-
-    @DeleteMapping("/{productId}")
-    public ResponseEntity<?> deleteProduct(@PathVariable Long productId) {
-
-        if (pRepository.existsById(productId)) {
-            pRepository.deleteById(productId);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-
-        return ResponseEntity.ok().build();
     }
 }
