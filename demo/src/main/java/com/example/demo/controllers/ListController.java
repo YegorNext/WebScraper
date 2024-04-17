@@ -32,7 +32,7 @@ public class ListController {
 
     @GetMapping("/")
     @ResponseBody
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<byte[]> getProducts() {
         ExcelService service = new ExcelService(pRepository);
 
@@ -48,7 +48,7 @@ public class ListController {
     }
 
     @PostMapping("/")
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<String> createProductsList(@RequestBody UrlRequest request) {
         WebParserService parser = new WebParserService(request.getUrl());
         pRepository.saveAll(parser.parsePage());

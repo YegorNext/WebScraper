@@ -28,7 +28,7 @@ public class ProductController {
     private IProductRepository pRepository;
 
     @GetMapping(path = "/", produces = "application/json")
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "*")
     @ResponseBody
     public Iterable<Product> getProducts() {
         return pRepository.findAll();
@@ -41,7 +41,7 @@ public class ProductController {
     }
 
     @DeleteMapping("/{productId}")
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<?> deleteProduct(@PathVariable String productId) {
 
         if (pRepository.existsById(productId)) {
