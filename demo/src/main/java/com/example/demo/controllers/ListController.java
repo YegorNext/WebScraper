@@ -25,6 +25,7 @@ import com.example.demo.services.ExcelService;
 
 @RestController
 @RequestMapping("/list")
+@CrossOrigin
 public class ListController {
 
     @Autowired
@@ -32,7 +33,7 @@ public class ListController {
 
     @GetMapping("/")
     @ResponseBody
-    @CrossOrigin(origins = "*")
+    @CrossOrigin
     public ResponseEntity<byte[]> getProducts() {
         ExcelService service = new ExcelService(pRepository);
 
@@ -48,7 +49,7 @@ public class ListController {
     }
 
     @PostMapping("/")
-    @CrossOrigin(origins = "*")
+    @CrossOrigin
     public ResponseEntity<String> createProductsList(@RequestBody UrlRequest request) {
         WebParserService parser = new WebParserService(request.getUrl());
         pRepository.saveAll(parser.parsePage());

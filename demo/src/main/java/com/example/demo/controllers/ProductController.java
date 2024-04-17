@@ -22,26 +22,28 @@ import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/products")
+@CrossOrigin
 public class ProductController {
 
     @Autowired
     private IProductRepository pRepository;
 
     @GetMapping(path = "/", produces = "application/json")
-    @CrossOrigin(origins = "*")
     @ResponseBody
+    @CrossOrigin
     public Iterable<Product> getProducts() {
         return pRepository.findAll();
     }
 
     @PostMapping("/")
+    @CrossOrigin
     public ResponseEntity<String> createProductsList(@RequestBody String url) {
 
         return ResponseEntity.ok("List successfully added");
     }
 
     @DeleteMapping("/{productId}")
-    @CrossOrigin(origins = "*")
+    @CrossOrigin
     public ResponseEntity<?> deleteProduct(@PathVariable String productId) {
 
         if (pRepository.existsById(productId)) {
