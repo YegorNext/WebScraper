@@ -57,13 +57,13 @@ public class WebParserService {
 
     private String buildDescription(Element item) {
         Elements points = item.select(".card__item-characteristics");
-        String description = null;
+        String description = "";
 
         for (Element point : points) {
-            description += point.select("dt").text() + ": " + point.select("dd").text();
+            description += point.select("dt").text() + ": " + point.select("dd").text() + " ";
         }
 
-        return description.substring(4).trim();
+        return description;
     }
 
     private String buildCode(Element item) {

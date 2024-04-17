@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.service.annotation.PatchExchange;
 
 import com.example.demo.entity.Product;
+import com.example.demo.model.UrlRequest;
 import com.example.demo.repository.IProductRepository;
 import com.example.demo.services.ExcelService;
 import com.example.demo.services.WebParserService;
@@ -46,9 +47,8 @@ public class ListController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<String> createProductsList(@RequestBody String url) {
-
-        WebParserService parser = new WebParserService(url);
+    public ResponseEntity<String> createProductsList(@RequestBody UrlRequest request) {
+        WebParserService parser = new WebParserService(request.getUrl());
         pRepository.saveAll(parser.parsePage());
 
         return ResponseEntity.ok("List successfully added");
