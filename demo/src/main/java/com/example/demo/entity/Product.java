@@ -6,8 +6,8 @@ import jakarta.persistence.*;
 @Table(name = "product")
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
 
     private String title;
     private String link;
@@ -15,11 +15,11 @@ public class Product {
 
     private float price;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -57,6 +57,6 @@ public class Product {
 
     @Transient
     public String[] getDataToString() {
-        return new String[] { String.valueOf(id), title, link, description, String.valueOf(price) };
+        return new String[] { id, title, link, description, String.valueOf(price) };
     }
 }

@@ -13,6 +13,9 @@ import org.springframework.web.service.annotation.PatchExchange;
 
 import com.example.demo.entity.Product;
 import com.example.demo.repository.IProductRepository;
+import com.example.demo.services.WebParserService;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
