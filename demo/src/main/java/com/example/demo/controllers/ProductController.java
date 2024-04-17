@@ -41,7 +41,8 @@ public class ProductController {
     }
 
     @DeleteMapping("/{productId}")
-    public ResponseEntity<?> deleteProduct(@PathVariable Long productId) {
+    @CrossOrigin(origins = "http://localhost:5173")
+    public ResponseEntity<?> deleteProduct(@PathVariable String productId) {
 
         if (pRepository.existsById(productId)) {
             pRepository.deleteById(productId);
