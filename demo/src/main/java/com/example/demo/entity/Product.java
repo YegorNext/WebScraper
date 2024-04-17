@@ -54,4 +54,9 @@ public class Product {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Transient
+    public String[] getDataToString() {
+        return new String[] { String.valueOf(id), title, link, description, String.valueOf(price) };
+    }
 }
