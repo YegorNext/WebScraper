@@ -72,6 +72,7 @@
 <template>
    <div class = "container-xxl mt-5"> 
             <h1 class="bold">Products Table</h1>
+            <div>Dubina Yehor, Group 122 - 20 - 4</div>
             <div class="spinner-border" role="status" v-if="update">
                 <span class="visually-hidden">Loading...</span>
             </div>
