@@ -5,15 +5,15 @@
 AWS EC2 Instance characterisitc:
 
 * Type t3.micro
-* Public IPv4 DNS: **_ec2-13-48-138-18.eu-north-1.compute.amazonaws.com_**
-* Public IPv4 address: **_13.48.138.18_**
+* Public IPv4 DNS: **_ec2-13-50-156-52.eu-north-1.compute.amazonaws.com_**
+* Public elastic IPv4 address: **_13.50.156.52_**
 
 ### Client side address
-* http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:3000/
+* http://ec2-13-50-156-52.eu-north-1.compute.amazonaws.com:3000/
 
 ### REST API Url examples
-* http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:8080/products/
-* http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:8080/list/
+* http://ec2-13-50-156-52.eu-north-1.compute.amazonaws.com:8080/products/
+* http://ec2-13-50-156-52.eu-north-1.compute.amazonaws.com:8080/list/
 
 ### Client Application
 Клієнтська частина побудована з використанням Vue.js, див. в гільці <a href = "https://github.com/YegorNext/WebScraper/tree/client">Client</a> поточного репозиторію.
