@@ -15,6 +15,9 @@ http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:3000/
 * http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:8080/products/
 * http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:8080/list/
 
+### Client Application
+Клієнтська частина побудована з використанням Vue.js, див. в гільці <a href = "https://github.com/YegorNext/WebScraper/tree/client">Client</a> поточного репозиторію.
+
 ## Project Structure
 
 **controllers/** 
