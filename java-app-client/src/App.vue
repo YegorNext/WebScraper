@@ -27,7 +27,7 @@
                 
                 for(let element of checkedData){
                     try{
-                        axios.delete(`http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:8080/products/${element.id}`);
+                        axios.delete(`http://localhost:8080/products/${element.id}`);
                     } catch(error){
                         console.error("Sending error: ", error);
                     }
@@ -39,7 +39,7 @@
                 this.update = true;
 
                 try {
-                    await axios.post('http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:8080/list/', { url: this.url });
+                    await axios.post('http://localhost:8080/list/', { url: this.url });
                     
                     this.getData();
                     this.update = false;
@@ -52,11 +52,11 @@
                 }
             },
             getExcel(){
-                window.location.href = 'http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:8080/list/';
+                window.location.href = 'http://localhost:8080/list/';
             },
             async getData(){
                 try {
-                    const response = await axios.get('http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:8080/products/');
+                    const response = await axios.get('http://localhost:8080/products/');
                     this.userData = response.data;
                 } catch (error) {
                     console.error('Error fetching data:', error);
