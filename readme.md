@@ -9,7 +9,7 @@ AWS EC2 Instance characterisitc:
 * Public IPv4 address: **_13.48.138.18_**
 
 ### Client side address
-http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:3000/
+* http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:3000/
 
 ### REST API Url examples
 * http://ec2-13-48-138-18.eu-north-1.compute.amazonaws.com:8080/products/
